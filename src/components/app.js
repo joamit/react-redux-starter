@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 import Header from './common/header';
 import {connect} from 'react-redux';
 import BubblePreLoader from 'react-bubble-preloader';
@@ -16,7 +16,8 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-    children: PropTypes.object.isRequired
+    children: React.PropTypes.object.isRequired,
+    loading: React.PropTypes.bool.isRequired
 };
 
 function mapStateToProps(state, ownProps) {

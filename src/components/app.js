@@ -1,5 +1,7 @@
 import React, {PropTypes} from 'react';
 import Header from './common/header';
+import {connect} from 'react-redux';
+import BubblePreLoader from 'react-bubble-preloader';
 
 class App extends React.Component {
     render() {
@@ -7,6 +9,7 @@ class App extends React.Component {
             <div className="container-fluid">
                 <Header/>
                 {this.props.children}
+                {this.props.loading && <div className="text-center"><BubblePreLoader animation={{ speed: 1 }}/></div>}
             </div>
         );
     }
@@ -16,4 +19,10 @@ App.propTypes = {
     children: PropTypes.object.isRequired
 };
 
-export default App;
+function mapStateToProps(state, ownProps) {
+    return {
+        loading: state.ajaxCallsInProgress > 0
+    };
+}
+
+export default connect(mapStateToProps)(App);

@@ -1,7 +1,6 @@
 import expect from 'expect';
 import React from 'react';
-import {mount, shallow} from 'enzyme';
-import TestUtils from 'react-addons-test-utils';
+import {shallow} from 'enzyme';
 import CourseForm from './course.form';
 
 function setup(saving) {

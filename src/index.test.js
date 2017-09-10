@@ -1,7 +1,7 @@
 import expect from 'expect';
 
-describe('Root file test', () => {
-    it('should pass', () => {
+describe('Root file ', () => {
+    it('should get initialized', () => {
         expect(true).toEqual(true);
     });
 });

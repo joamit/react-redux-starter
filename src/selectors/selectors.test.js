@@ -1,7 +1,7 @@
 import expect from 'expect';
 import {authorsFormatterForDropdown} from './selectors';
 
-describe('Selectors Tests ', () => {
+describe('Selectors ', () => {
 
     describe('authorsFormatterForDropdown ', () => {
 
